@@ -1,11 +1,9 @@
 import java.util.*;
 
-
 public class Project1 {
 
     private static final int NUMOFGARAGES = 3; //Number of Garages
     private static final String QUESTION = "Which garage : (1,2 or 3)";
-
 
     private static void printMenu(){
         System.out.println("O - Open door");
@@ -37,7 +35,6 @@ public class Project1 {
     }
 
     public static void main(String[] args){
-
 
         String inputChar;
         int inputGarage;
