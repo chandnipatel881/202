@@ -1,8 +1,8 @@
 public class Garage {
 
-    private boolean isDoorOpen; //false means isDoorOpen is closed, true means isDoorOpen is open
-    private boolean hasCar;  //false means there is no hasCar in the garage, true means there is a hasCar in the garage
-    private boolean isOperating; //false means the isDoorOpen is broken, true means the isDoorOpen is isOperating fine
+    private boolean isDoorOpen; //false means Door is closed, true means Door is open
+    private boolean hasCar;  //false means there is no Car in the garage, true means there is a Car in the garage
+    private boolean isOperating; //false means the Door is broken, true means the Door is isOperating fine
     private boolean metAccident; //true means the door has met accident, false is otherwise
 
     /**
