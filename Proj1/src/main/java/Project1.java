@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Project1 {
 
-    private static final int NUMOFGARAGES = 3;
+    private static final int NUMOFGARAGES = 3; //Number of Garages
     private static final String QUESTION = "Which garage : (1,2 or 3)";
 
 
