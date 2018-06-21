@@ -5,7 +5,7 @@ public class Fraction {
 
     /**
      * Constructs a new Fraction with a provided numerator and denominator
-     * Precondition: denominator must be greater than zero
+     * Precondition: denominator must not be zero
      * Postcondition: None
      * @param n the numerator of the new Fraction
      * @param d the denominator of the new Fraction

@@ -54,6 +54,7 @@ import java.util.Scanner;
                 secondFraction.decimalValue());
 
 
+
         System.out.println("The product of the two fractions is " +
                 firstFraction.multiply(secondFraction).toString());
         System.out.println("Are these fractions equivalent? " +
