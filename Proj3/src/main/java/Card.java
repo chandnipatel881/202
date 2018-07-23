@@ -1,3 +1,6 @@
+/**
+ * Card class represents cards of deck
+ */
 public class Card {
 
     private Rank rank;
@@ -31,5 +34,16 @@ public class Card {
      */
     public Suit getSuit() {
         return suit;
+    }
+
+    @Override
+    public String toString() {
+        StringBuffer str = new StringBuffer();
+        str.append("Rank : ");
+        str.append(this.getRank());
+        str.append("  Suit : ");
+        str.append(this.getSuit());
+
+        return str.toString();
     }
 }
