@@ -1,7 +1,7 @@
 public class Tableau {
 
     public Card[] tableau;
-    private Deck deck = new Deck();
+    public Deck deck;
 
     /**
      * Tableau constructor
@@ -10,10 +10,10 @@ public class Tableau {
      * @param tableauRows
      * @param tableauColumns
      */
-    public Tableau(int tableauRows, int tableauColumns){
+    public Tableau(int tableauRows, int tableauColumns, Deck deck){
+        this.deck = deck;
         if (tableauRows >= 0 && tableauColumns >= 0) {
             tableau = new Card[tableauRows * tableauColumns];
-            deck.shuffle();
             for(int i = 0; i < tableau.length; i++){
                 tableau[i] = deck.draw();
             }
@@ -45,6 +45,8 @@ public class Tableau {
             tableau[i] = deck.draw();
         }
     }
+
+
 
     /**
      * toString function to print tableau object

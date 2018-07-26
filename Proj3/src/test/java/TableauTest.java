@@ -4,7 +4,7 @@ import static org.testng.Assert.*;
 
 public class TableauTest {
 
-    public Tableau tableau = new Tableau(5,5);
+    public Tableau tableau = new Tableau(5,5,new Deck());
 
     @Test
     public void testTableauConstructor(){

@@ -13,7 +13,7 @@ public class DeckTest {
 
     @Test
     public void testDeckShuffle(){
-        deck.shuffle();
+        deck.shuffle(1);
         System.out.println(deck);
     }
 

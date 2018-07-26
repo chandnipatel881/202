@@ -4,8 +4,8 @@ import java.util.*;
  */
 public class Deck {
 
-    private Card[] deck = new Card[52];
-    private int numCardDrawn;
+    private final int NUM_CARDS = 52;
+    private Card[] deck = new Card[NUM_CARDS];
     private int sizeOfDeck;
 
     /**
@@ -13,12 +13,11 @@ public class Deck {
      * Creates 52 unique Card objects
      */
     public Deck() {
-        for (int i = 0; i < Rank.values().length; i++) {
-            for (int j = 0; j < Suit.values().length; j++) {
-                deck[Suit.values().length * i + j] = new Card(Rank.values()[i], Suit.values()[j]);
+        for (int i = 0; i < Suit.values().length; i++) {
+            for (int j = 0; j < Rank.values().length; j++) {
+                deck[Rank.values().length * i + j] = new Card(Rank.values()[j], Suit.values()[i]);
             }
         }
-        numCardDrawn = 0;
         sizeOfDeck = deck.length;
     }
 
@@ -26,8 +25,8 @@ public class Deck {
      * Shuffles the Deck
      * Assumes the deck is full
      */
-    public void shuffle() {
-        Random num = new Random();
+    public void shuffle(long seed) {
+        Random num = new Random(seed);
         int n = deck.length - 1;
         Card temp;
         do {
@@ -44,8 +43,10 @@ public class Deck {
      * @return - first card from the deck
      */
     public Card draw(){
-        Card retCard = this.deck[numCardDrawn];
-        numCardDrawn++;
+        if(sizeOfDeck == 0){
+            return null;
+        }
+        Card retCard = this.deck[NUM_CARDS - sizeOfDeck];
         sizeOfDeck--;
         return retCard;
     }
